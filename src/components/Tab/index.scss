@@ -1,0 +1,49 @@
+.tab-container {
+  .tab-bar {
+    display: flex;
+    position: relative;
+    width: 100%;
+  }
+  .tab-item {
+    line-height: 60px;
+    height: 80px;
+    flex: 1;
+    text-align: center;
+    font-size: 32px;
+    position: relative;
+    &.active {
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+  }
+  .tab-slider {
+    height: 6px;
+    transition: transform 0.3s ease-in-out;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    z-index: -1;
+    &::after {
+      height: 6px;
+      position: absolute;
+      content: "";
+      left: 50%;
+      width: 100%;
+      transform: translateX(-50%);
+      border-radius: 6px;
+      bottom: 0;
+      background: var(--primary-color);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  .active ~ .tab-slider {
+    z-index: 2;
+    &::after {
+      width: 60px;
+    }
+  }
+  .tab-content {
+    width: 100%;
+    height: auto;
+  }
+}

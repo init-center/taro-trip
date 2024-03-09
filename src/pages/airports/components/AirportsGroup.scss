@@ -1,0 +1,18 @@
+.list-item {
+  position: relative;
+  .label {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    color: #999;
+    font-size: 24px;
+  }
+  .name {
+    background-color: #fff;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+  }
+}
